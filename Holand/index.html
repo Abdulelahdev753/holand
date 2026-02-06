@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Amsterdam Trip Guide" />
+  <title>جدول أمستردام - رحلة 5 أيام في هولندا</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="../payment-gateway.js"></script>
+  <script src="../phone-purchase.js"></script>
+  <script src="../payment-status-checker.js"></script>
+  <script src="../content-protection.js"></script>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="nav-brand">أمستردام 🇳🇱</div>
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero" class="nav-link">الرئيسية</a></li>
+        <li><a href="#tips" class="nav-link">النصائح</a></li>
+        <li><a href="#itinerary" class="nav-link">برنامج الرحلة</a></li>
+        <li><a href="#transportation" class="nav-link">🚇 المواصلات</a></li>
+        <li><a href="#hotels" class="nav-link">🏨 الفنادق</a></li>
+        <li><a href="#winter" class="nav-link">❄️ فعاليات الشتاء</a></li>
+        <li><a href="#apps" class="nav-link">📱 التطبيقات</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1 class="hero-title animate-fade-in">جدول أمستردام - رحلة 5 أيام</h1>
+      <p class="hero-subtitle animate-fade-in-delay-1">
+        دليلك الشامل لاستكشاف أمستردام وما حولها
+      </p>
+      <button class="payment-btn animate-fade-in-delay-2" onclick="phonePurchase.showPhoneModal('Amsterdam')">
+        اشتري الدليل الآن - 28 ر.س
+      </button>
+      <a href="#tips" class="cta-button animate-fade-in-delay-2">شاهد التفاصيل أولاً</a>
+    </div>
+    <div class="scroll-indicator">
+      <span>↓</span>
+    </div>
+  </section>
+
+  <!-- Tips Section -->
+  <section class="tips-section" id="tips">
+    <div class="container">
+      <h2 class="section-title">أهم النصائح للسفر إلى أمستردام</h2>
+
+      <!-- General Tips -->
+      <div class="tip-category">
+        <h3 class="category-title">
+          <span class="icon">📖</span>
+          النصائح الأساسية
+        </h3>
+        <div class="tip-content">
+          <div class="transport-grid">
+            <div class="transport-card recommended">
+              <div class="badge">موصى به</div>
+              <div class="transport-icon">🗓️</div>
+              <h4>خطة اليوم</h4>
+              <p>
+                صباح معلم رئيسي → ظهر تمشية/تسوق → مساء فعالية/عشاء. كل الأماكن في السنتر قريبة من بعض.
+              </p>
+            </div>
+
+            <div class="transport-card">
+              <div class="transport-icon">🚇</div>
+              <h4>المواصلات</h4>
+              <p>
+                استخدم كارت GVB للترام والمترو والباص، أو استخدم القطار NS للمدن القريبة مثل زاندام وزانسي سخانس.
+              </p>
+            </div>
+
+            <div class="transport-card">
+              <div class="transport-icon">🚶</div>
+              <h4>المشي</h4>
+              <p>
+                أمستردام مدينة صغيرة، أغلب الأماكن في السنتر على بعد 10-20 دقيقة مشي. حذاء مريح مهم جدًا.
+              </p>
+            </div>
+
+            <div class="transport-card special">
+              <div class="transport-icon">📅</div>
+              <h4>الحجوزات</h4>
+              <p>احجز التذاكر للمتاحف والتجارب أونلاين بدري خصوصًا في المواسم. احجز المطاعم المشهورة.</p>
+            </div>
+
+            <div class="transport-card">
+              <div class="transport-icon">🍽️</div>
+              <h4>الأكل الحلال</h4>
+              <p>فيه خيارات حلال كثيرة في أمستردام خصوصًا مطاعم تركية وشامية وهندية.</p>
+            </div>
+
+            <div class="transport-card">
+              <div class="transport-icon">💵</div>
+              <h4>العملة</h4>
+              <p>اليورو هو العملة الرسمية. ادفع بالبطاقة في كل مكان، معظم الأماكن ما تقبل كاش.</p>
+            </div>
+
+            <div class="transport-card">
+              <div class="transport-icon">🔌</div>
+              <h4>الأجهزة</h4>
+              <p>محول أفياش أوروبي Type C/F + شاحن متنقل مهمين.</p>
+            </div>
+
+            <div class="transport-card">
+              <div class="transport-icon">📶</div>
+              <h4>النت والملاحة</h4>
+              <p>eSIM أو رومنج، وحمّل خرائط أوفلاين للمناطق الرئيسية.</p>
+            </div>
+
+            <div class="transport-card">
+              <div class="transport-icon">🌧️</div>
+              <h4>الطقس</h4>
+              <p>الجو ممكن يكون ماطر أي وقت، خذ معك مظلة خفيفة وجاكيت واق من المطر.</p>
+            </div>
+
+            <div class="transport-card">
+              <div class="transport-icon">🚲</div>
+              <h4>الدراجات</h4>
+              <p>أمستردام مشهورة بالدراجات، بس انتبه من ممرات الدراجات، لا تمشي فيها!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Food Recommendations Section -->
+  <section class="tips-section" id="food-recommendations">
+    <div class="container">
+      <h2 class="section-title">ترشيحات مختارة</h2>
+
+      <div class="tip-content">
+        <p style="line-height: 1.8; text-align: center; margin-bottom: 25px; font-weight: 500;">
+          تجربة الأكل في أمستردام ما تتفوّت:
+        </p>
+
+        <div class="transport-grid">
+          <!-- WAKO Smash Burger -->
+          <div class="transport-card recommended">
+            <div class="transport-icon">🍔</div>
+            <h4>WAKO Smash Burger</h4>
+            <p>برغر سماش لذيذ لعشّاق البرغر، جرّب دبل سماش برغر مع تشيز + فرايز… وجبّة سريعة وتشبّع 🔥</p>
+            <a href="https://maps.app.goo.gl/NLXP5EAxYfBHozHdA?g_st=ipc" class="location-link" target="_blank" rel="noopener">🔗 اللوكيشن</a>
+          </div>
+
+          <!-- FA. Stroop Stroopwafels -->
+          <div class="transport-card recommended">
+            <div class="transport-icon">🧇</div>
+            <h4>FA. Stroop Stroopwafels</h4>
+            <p>محل وافل هولندي أصلي، أفضل شي تطلب ستروب وافل طازج دافي بالحشوة الكراميل، ولو تحب الحلى زيادة خذ واحد بـ نوتيلا 🤎</p>
+            <a href="https://maps.app.goo.gl/dtdUqgRBttAffrar8?g_st=ipc" class="location-link" target="_blank" rel="noopener">🔗 اللوكيشن</a>
+          </div>
+
+          <!-- The Lebanese Sajeria -->
+          <div class="transport-card recommended">
+            <div class="transport-icon">🥙</div>
+            <h4>The Lebanese Sajeria</h4>
+            <p>مطعم لبناني صغير ولطيف، يناسب لو اشتقتوا للأكل العربي، جرّبوا سجّ دجاج أو فلافل أو زعتر مع جبنة كوجبة خفيفة أثناء التمشية 🌯</p>
+            <a href="https://maps.app.goo.gl/PnLYWkRF3YvQQa9e9?g_st=ipc" class="location-link" target="_blank" rel="noopener">🔗 اللوكيشن</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rainy Weather Disclaimer Section -->
+  <section class="tips-section" id="rainy-weather">
+    <div class="container">
+      <h2 class="section-title">تنويه اذا الجو ممطر</h2>
+
+      <div class="tip-content">
+        <div class="transport-card">
+          <p style="line-height: 1.8; text-align: justify; margin-bottom: 15px;">
+            في الأيام اللي داخل أمستردام، لو المطر قوي تقدرون تستبدلون التمشية بـ:
+          </p>
+          <ul style="line-height: 2; text-align: right; list-style-position: inside;">
+            <li>زيارة مول داخلي أو مركز تسوّق قريب منكم.</li>
+            <li>كافيهات فى De Pijp أو Jordan تقضّون فيها ساعتين إلى ما يخفّ المطر.</li>
+            <li>زيارة متحف واحد خفيف (مثل Van Gogh أو Rijksmuseum) للي يحب المتاحف</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Itinerary Section -->
+  <section class="itinerary-section" id="itinerary">
+    <div class="container">
+      <h2 class="section-title">برنامج الرحلة - 5 أيام</h2>
+
+      <!-- Days Navigation Bar -->
+      <nav class="days-navbar" id="daysNavbar">
+        <button class="day-tab active" data-day="1">اليوم 1</button>
+        <button class="day-tab" data-day="2">اليوم 2</button>
+        <button class="day-tab" data-day="3">اليوم 3</button>
+        <button class="day-tab" data-day="4">اليوم 4</button>
+        <button class="day-tab" data-day="5">اليوم 5</button>
+      </nav>
+
+      <div class="days-content-wrapper">
+        <!-- Day 1: Heart of Amsterdam & Upside Down -->
+        <div class="day-card" data-day="1">
+          <div class="day-header">
+            <div class="day-number">اليوم 1</div>
+            <h3 class="day-title">قلب أمستردام & Upside Down</h3>
+          </div>
+          <div class="day-content">
+            <div class="day-location">
+              <p>يوم تعارف مع أمستردام، نبدأ من قلب المدينة ونتمشّى بين القنوات والكافيهات ونختم بتجربة Upside Down اللطيفة 🌷☕</p>
+            </div>
+            <div class="timeline">
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/cafe-chun.jpg" alt="Café Chun" />
+                <div class="time">⏰ 09:00 الفطور</div>
+                <div class="activity">
+                  <h4>Café Chun Berenstraat</h4>
+                  <p>كافيه مشهور بسندويتشاته وقهوته، مكانه في حي لطيف وتقييمه عالي.</p>
+                  <a href="https://maps.app.goo.gl/KNAjp7QQev2Mke5s7?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/DAM.png" alt="dam" />
+                <div class="time">⏰ 10:30</div>
+                <div class="activity">
+                  <h4>تمشية في شوارع أمستردام</h4>
+                  <p>نبدأ يومنا في قلب أمستردام في هذي الساحة اللي تعتبر السنتر، نتمشّى حوالين المحلات والكافيهات ونأخذ جو المدينة على هدوء ☕🚶‍♂️</p>
+                  <a href="https://maps.app.goo.gl/giqFnpT9uZS9a6fc6?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/canal-cruise.jpg" alt="Canal Cruise" />
+                <div class="time">⏰ 12:00</div>
+                <div class="activity">
+                  <h4>جولة بالقارب في القنوات - Canal Cruise</h4>
+                  <p>خذوا جولة بالقارب وقت الغروب في قنوات أمستردام، الجو يكون هادي والأنوار على المباني 
+تعطيكم أحلى صورة عن المدينة من أول يوم</p>
+                  <a href="https://maps.app.goo.gl/gbpMiFVQdtF22e8M7?g_st=ipc" class="location-link" target="_blank">📍 Tours & Tickets</a>
+                  <p class="tip">💡 تقدر تحجز من مكتب Tours & Tickets عند القنوات أو قرب ساحة Dam</p>
+                </div>
+              </div>
+
+              <div class="timeline-item highlight-activity">
+                <img class="timeline-item-image" src="images/upside-down-amsterdam.png" alt="Upside Down" />
+                <div class="time">⏰ 14:00</div>
+                <div class="activity">
+                  <h4>The Upside Down Amsterdam</h4>
+                  <p> فخمة للتصوير والذكريات - غرف مقلوبة ومناظر مذهلة.</p>
+                  <a href="https://maps.app.goo.gl/fsNXjqjRYHLbHzed7?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/de-bijenkorf.jpg" alt="De Bijenkorf" />
+                <div class="time">⏰ 16:00 اختياري</div>
+                <div class="activity">
+                  <h4>أماكن إضافية مناسبة:</h4>
+                  <ul class="places-list">
+                    <li><strong>de Bijenkorf Mall:</strong> مول براندات معروف عند ساحة Dam</li>
+                    <li><strong>Van Stapele Koekmakerij:</strong> محل كوكيز رقم 1 في أمستردام</li>
+                    <li><strong>Polaberry:</strong> فراولة بالشوكولاتة البلجيكية، تصويره جميل</li>
+                  </ul>
+                  <a href="https://maps.app.goo.gl/BmbMDJSMApfzQeJZA?g_st=ipc" class="link-button" target="_blank">📍 de Bijenkorf</a>
+                  <a href="https://maps.app.goo.gl/rjgDTRAvbmgGFWTi6?g_st=ipc" class="link-button" target="_blank">📍 Van Stapele</a>
+                  <a href="https://maps.app.goo.gl/zNtpkdrkmfYWZsPo8?g_st=ipc" class="link-button" target="_blank">📍 Polaberry</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/ashoka-restaurant.jpg" alt="Ashoka Restaurant" />
+                <div class="time">⏰ 20:00 العشاء</div>
+                <div class="activity">
+                  <h4>Ashoka - مطعم هندي</h4>
+                  <p>مطعم أكله لذيذ وخدمته ممتازة، مناسب لعشاء هادي قريب من السنتر.</p>
+                  <a href="https://maps.app.goo.gl/SnxWtQU1PD11igoh6?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="day-cost">💰 تكلفة اليوم: حسب النشاطات والمطاعم</div>
+          </div>
+        </div>
+
+        <!-- Day 2: AMAZE & A'DAM Lookout / THIS IS HOLLAND -->
+        <div class="day-card" data-day="2">
+          <div class="day-header">
+            <div class="day-number">اليوم 2</div>
+            <h3 class="day-title">AMAZE & A'DAM Lookout / THIS IS HOLLAND</h3>
+          </div>
+          <div class="day-content">
+            <div class="day-location">
+              <p>يوم تجارب وحماس، من AMAZE للإطلالة من A’DAM أو تجربة THIS IS HOLLAND عن هولندا كلها في يوم واحد 🎧🏙️</p>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/amsterdam-lagom.jpg" alt="Amsterdam Lagom" />
+                <div class="time">⏰ 09:00 الفطور</div>
+                <div class="activity">
+                  <h4>Amsterdam Lagom</h4>
+                  <p>فطور هادي وقهوة لطيفة لبداية اليوم.</p>
+                  <a href="https://maps.app.goo.gl/34GLk7WK6Y2sQ7m98" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+
+              <div class="timeline-item highlight-activity">
+                <img class="timeline-item-image" src="images/amaze-amsterdam.jpg" alt="AMAZE Amsterdam" />
+                <div class="time">⏰ 10:30</div>
+                <div class="activity">
+                  <h4>AMAZE Amsterdam</h4>
+                  <p>تجربة مكوّنة من غرف إضاءة وصوت وليزر، تمشون بينها زي المسار، جوها ممتع للتصوير وتغيير جو.</p>
+                  <a href="https://maps.app.goo.gl/sCWwtKtnCwjcdSZM7?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/ferry-amsterdam.jpg" alt="Ferry" />
+                <div class="time">⏰ 12:30</div>
+                <div class="activity">
+                  <h4>الذهاب إلى منطقة A'DAM</h4>
+                  <p><strong>طريقة الوصول:</strong></p>
+                  <ol>
+                    <li>روح مشي إلى Amsterdam Central Station</li>
+                    <li>من خلف المحطة فيه مواقف العبّارات (Ferries)</li>
+                    <li>اركب الفيري المجاني المتجه إلى Buiksloterweg (العبّارة تاخذ تقريبًا 5 دقايق)</li>
+                    <li>أول ما تنزل من الفيري تمشّى دقيقتين وتلقى A'DAM Lookout و THIS IS HOLLAND</li>
+                  </ol>
+                  <a href="https://maps.app.goo.gl/cuattjR7MP4KH1Ws5?g_st=ipc" class="link-button" target="_blank">موقف العبّارات 📍 </a>
+                </div>
+              </div>
+
+              <div class="timeline-item highlight-activity">
+                <img class="timeline-item-image" src="images/adam-lookout.jpg" alt="A'DAM Lookout" />
+                <div class="time">⏰ 13:00</div>
+                <div class="activity">
+                  <h4>A'DAM Lookout</h4>
+                  <ul class="feature-list">
+                    <li>منصة مرتفعة بإطلالة 360° على أمستردام</li>
+                    <li>تقدر تركب لعبة Over the Edge Swing (المرجوحة اللي تطلع فوق المبنى)</li>
+                    <li>فيه صور، وبار/كافيه بسيط فوق لو حابين مشروب أو سناك خفيف</li>
+                  </ul>
+                  <a href="https://maps.app.goo.gl/pYyJE97GUoHuftZy8?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/this-is-holland.jpg" alt="THIS IS HOLLAND" />
+                <div class="time">⏰ 15:00</div>
+                <div class="activity">
+                  <h4>THIS IS HOLLAND</h4>
+                  <p>تجربة سينمائية/طيران افتراضي عن كل هولندا، مدتها تقريبًا 45 دقيقة مع عرض عن المدن والقرى والقنوات - حلوة للعوائل وتعطيكم فكرة عن البلد كامل.</p>
+                  <a href="https://maps.app.goo.gl/pf6mWrtL2Hh6Kj4KA" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/adam-lunch.jpg" alt="Lunch" />
+                <div class="time">⏰ الغداء</div>
+                <div class="activity">
+                  <h4>الغداء في نفس المنطقة</h4>
+                  <p>تقدرون تتغدون في واحد من المطاعم أو الكافيهات الموجودة:</p>
+                  <ul class="places-list">
+                    <li>داخل مبنى A'DAM Tower</li>
+                    <li>على الواجهة البحرية جنب Eye Film Museum</li>
+                  </ul>
+                  <p class="tip">💡 اختار اللي يعجبك من قوقل ماب هناك حسب التقييم والميزانية</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/lourens-bakery.jpg" alt="Lourens Bakery" />
+                <div class="time">⏰ 17:00</div>
+                <div class="activity">
+                  <h4>قهوة وحلى</h4>
+                  <p>بعد ما ترجعون من A'DAM بالفيري، قهوة وحلا في <strong>Lourens</strong> (المخبز الشهير اللي فيه أنواع كرواسون وحلويات).</p>
+                  <a href="https://maps.app.goo.gl/FbeQqrS76a6TxZTx8?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/fiaschetteria-pistoia.webp" alt="Fiaschetteria Pistoia" />
+                <div class="time">⏰ 20:00 العشاء</div>
+                <div class="activity">
+                  <h4>Fiaschetteria "Pistoia" - مطعم إيطالي</h4>
+                  <p>مطعم إيطالي جوه دافي وأكله لذيذ، مناسب تختمون فيه اليوم الثاني.</p>
+                  <a href="https://maps.app.goo.gl/jKW54tsKq1ZAYh2D7?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/WAKO.png" alt="WAKO" />
+                <div class="time">⏰ 20:00 العشاء</div>
+                <div class="activity">
+                  <h4>Wako</h4>
+                  <p>              مطعم برغر حلال رهيب، تقدرون تخلوه غداء أو عشاء متأخر بعد ما ترجعون من A'DAM Lookout.</p>
+                  <a href="https://maps.app.goo.gl/rZG3vwhn1z56xRQd8?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+            </div>
+            <div class="info-box">
+              <p><strong> لو تحسّون اليوم ثقيل، اختاروا إمّا A’DAM Lookout أو THIS IS HOLLAND بدل الاثنين، حسب ذوقكم.</strong></p>
+            </div>
+            <div class="day-cost">💰 تكلفة اليوم: حسب النشاطات والمطاعم</div>
+          </div>
+        </div>
+
+        <!-- Day 3: Zaandam & Zaanse Schans -->
+        <div class="day-card" data-day="3">
+          <div class="day-header">
+            <div class="day-number">اليوم 3</div>
+            <h3 class="day-title">Zaandam & Zaanse Schans - القرية التراثية</h3>
+          </div>
+          <div class="day-content">
+            <div class="day-location">
+              <p>يوم قرى وطواحين، نفطر في سنتر زاندام وبعدين نروح لزانسي سخانس للأجواء التراثية والطبيعة الهادية 🌾🌬️</p>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/train-zaandam.jpg" alt="Train" />
+                <div class="time">⏰ 09:00 الانطلاق</div>
+                <div class="activity">
+                  <h4>قطار من Amsterdam Central → Zaandam Station</h4>
+                  <p>المدة: حوالي 12 دقيقة</p>
+                  <a href="https://maps.app.goo.gl/y6EfaZTXcVwaLLZV9?g_st=ipc" class="location-link" target="_blank">📍 Zaandam Station</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/zaandam-city.jpg" alt="Zaandam" />
+                <div class="time">⏰ 09:30 الفطور</div>
+                <div class="activity">
+                  <h4>فطور في Zaandam City Center</h4>
+                  <p>أول ما تنزلون من القطار، تمشّوا شوي باتجاه Zaandam City Center عند المباني الملوّنة، وهناك تفطرون.</p>
+                  <p><strong>Turkish Restaurant - Zaandam City Center:</strong> مطعم تركي حلال في السنتر، ممتاز وسعره حلو ومكانه قريب.</p>
+                  <a href="https://maps.app.goo.gl/gq27vkUo27Hpets77?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/zaandam-buildings.jpg" alt="Zaandam Buildings" />
+                <div class="time">⏰ 10:30</div>
+                <div class="activity">
+                  <h4>تمشية وتصوير عند المباني الملوّنة</h4>
+                  <p>بعد الفطور، تمشية وتصوير عند المباني الملوّنة الشهيرة في زاندام.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/train-to-zaanse-schans.jpg" alt="Train to Zaanse Schans" />
+                <div class="time">⏰ 11:30</div>
+                <div class="activity">
+                  <h4>القطار إلى Zaanse Schans</h4>
+                  <p>من Zaandam Station، خذوا قطار إلى Zaandijk-Koog Station، ومن هناك تمشية تقريبًا 10 دقايق باتجاه لوحات Zaanse Schans لين توصلون القرية.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item highlight-activity">
+                <img class="timeline-item-image" src="images/zaanse-schans.jpg" alt="Zaanse Schans" />
+                <div class="time">⏰ 12:00</div>
+                <div class="activity">
+                  <h4>Zaanse Schans - القرية التراثية</h4>
+                  <p>في Zaanse Schans هناك تقدرون:</p>
+                  <ul class="places-list">
+                    <li><strong>الطواحين الهوائية:</strong> زيارة Zaanse Schans Windmills وتشوفون المنظر من فوق</li>
+                    <li><strong>محل الجبن:</strong> الدخول على Cheese Farm / Cheese Shop وتجربة أنواع الجبن</li>
+                    <li><strong>الأحذية الخشبية:</strong> المرور على Wooden Clog Workshop وتشوفون طريقة صناعة الأحذية الخشبية</li>
+                    <li><strong>جولة بالقارب:</strong> تجربة Zaanse Schans Canal Boat Tour (جولة بالقارب في النهر حوالين القرية)</li>
+                  </ul>
+                  <a href="https://maps.app.goo.gl/Gyapp15rDNoy8gSe6?g_st=ipc" class="link-button" target="_blank">الطواحين 📍</a>
+                  <a href="https://maps.app.goo.gl/ogARX4Z29A6YzZ6u9?g_st=ipc" class="link-button" target="_blank">محل الجبن 📍</a>
+                  <a href="https://maps.app.goo.gl/6is1LJWaVXH3M1E77?g_st=ipc" class="link-button" target="_blank">الأحذية 📍</a>
+                  <a href="https://maps.app.goo.gl/yrfTJ3LH6RYcQBUs5?g_st=ipc" class="link-button" target="_blank">جولة القارب 📍</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/station-koog-zaandijk.jpg" alt="Return" />
+                <div class="time">⏰ 16:00 العودة</div>
+                <div class="activity">
+                  <h4>الرجعة لأمستردام</h4>
+                  <p>من آخر اليوم ترجعون مشي لمحطة Zaandijk-Koog Station، ثم تاخذون قطار مباشر إلى Amsterdam Central Station وترجعون للفندق.</p>
+                  <a href="https://maps.app.goo.gl/uMLtCH6dT1fcnEMN8?g_st=ipc" class="location-link" target="_blank">📍 Zaandijk-Koog Station</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/fabel-friet.jpg" alt="Fabel Friet" />
+                <div class="time">⏰ 18:00</div>
+                <div class="activity">
+                  <h4>سناك خفيف</h4>
+                  <p>بعد ما ترجعون لأمستردام، تمشّوا شوي في السنتر، وبالليل سناك خفيف في:</p>
+                  <p><strong>Fabel Friet Runstraat:</strong> محل بطاطس مشهور في أمستردام، الصوصات متنوّعة وطابوره غالبًا طويل بس يمشي بسرعة.</p>
+                  <a href="https://maps.app.goo.gl/zko81USiHAHJheM69?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/lentrecote.jpg" alt="L'Entrecôte" />
+                <div class="time">⏰ 20:00 العشاء</div>
+                <div class="activity">
+                  <h4>L'Entrecôte et les Dames</h4>
+                  <p>مطعم معروف بفكرة الستيك والصلصة الخاصة فيه، تقييمه ممتاز ومكانه مناسب لعشاء مرتب بعد يوم طويل.</p>
+                  <a href="https://maps.app.goo.gl/tHvvJqubMtf2FTju8?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="day-cost">💰 تكلفة اليوم: تذاكر القطار + الأنشطة + الطعام</div>
+          </div>
+        </div>
+
+        <!-- Day 4: Giethoorn Trip -->
+        <div class="day-card" data-day="4">
+          <div class="day-header">
+            <div class="day-number">اليوم 4</div>
+            <h3 class="day-title">رحلة قرية خيتهورن Giethoorn</h3>
+          </div>
+          <div class="day-content">
+            <div class="day-location"> 
+              <p>يوم كامل في خيتهورن “فينيسيا الشمال”، قوارب وقنوات وجو روقان بعيد عن زحمة المدينة 🛶💙</p>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/omelegg.jpg" alt="Omelegg" />
+                <div class="time">⏰ 08:00 الفطور</div>
+                <div class="activity">
+                  <h4>Omelegg</h4>
+                  <p>مطعم فطور معروف في أمستردام – بيض بأنواعه، توست، عصيرات وقهوة. جّوه بسيط وأكله يشبع قبل مشوار القرية.</p>
+                  <a href="https://maps.app.goo.gl/axzSVHUd5DB98Zgg9?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/amsterdam-central-station.jpg" alt="Meeting Point" />
+                <div class="time">⏰ 09:00 نقطة التجمع</div>
+                <div class="activity">
+                  <h4>نقطة التجمع في Amsterdam Central Station</h4>
+                  <p>بعد الفطور تتجهون إلى Amsterdam Central Station على نقطة التجمع اللي محددها لكم موقع GetYourGuide (غالبًا عند مكتب Tours & Tickets داخل المحطة). من هناك يطلعون معكم بالباص إلى Giethoorn.</p>
+                  <a href="https://maps.app.goo.gl/BMKX18v55i69zRY48?g_st=ipc" class="location-link" target="_blank">📍 نقطة التجمع</a>
+                </div>
+              </div>
+
+              <div class="timeline-item highlight-activity">
+                <img class="timeline-item-image" src="images/giethoorn.jpg" alt="Giethoorn" />
+                <div class="time">⏰ 11:00 - 17:00</div>
+                <div class="activity">
+                  <h4>في Giethoorn</h4>
+                  <ul class="feature-list">
+                    <li>جولة بالقارب في القنوات بين البيوت الخشبية والجسور الصغيرة</li>
+                    <li>وقت حر تتمشّون في القرية، تقعدون على كافيهات مطلة على الموية، وتتصورون</li>
+                    <li>تقدرون تاخذون آيس كريم أو كريب / وافل خلال التمشية</li>
+                  </ul>
+                  <p class="tip">💡 القرية ساحرة وهادية، استمتعوا بالأجواء الطبيعية</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/giethoorn-return.jpg" alt="Return" />
+                <div class="time">⏰ 18:00 العودة</div>
+                <div class="activity">
+                  <h4>العودة لأمستردام</h4>
+                  <p>بعد ما يخلص التور، ترجعون بالباص إلى أمستردام وتكونون واصلين المغرب تقريبًا.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/sham-west.jpg" alt="Sham West" />
+                <div class="time">⏰ 20:00 العشاء</div>
+                <div class="activity">
+                  <h4>Sham West - مطعم شامي/عربي</h4>
+                  <p>أكل شامي على أصوله، مناقيش، مشاوي ومقبلات، مكانه مناسب بعد يوم طويل وبرضو تقييمه ممتاز في قوقل ماب.</p>
+                  <a href="https://maps.app.goo.gl/CneDHPA6mM9mUmkL7?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-box">
+              <h4>نصيحة مهمة:</h4>
+              <p>احجز رحلة Giethoorn من GetYourGuide أو أي موقع تورات، لأن الذهاب بالقطار العام صعب ويأخذ وقت طويل.</p>
+            </div>
+
+            <div class="day-cost">💰 تكلفة اليوم: تذكرة التور + الطعام</div>
+          </div>
+        </div>
+
+        <!-- Day 5: Amsterdam Markets & Neighborhoods -->
+        <div class="day-card" data-day="5">
+          <div class="day-header">
+            <div class="day-number">اليوم 5</div>
+            <h3 class="day-title">أسواق وأحياء أمستردام</h3>
+          </div>
+          <div class="day-content">
+            <div class="day-location">
+              <p>يوم خفيف نختم فيه الرحلة بين الأسواق والأحياء المحلية والكافيهات وبكذا نودّع أمستردام على هدوء 🛍️</p>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/greenwood.jpg" alt="Greenwood" />
+                <div class="time">⏰ 09:00 الفطور</div>
+                <div class="activity">
+                  <h4>Greenwood</h4>
+                  <p>مطعم فطور وكافيه مشهور في أمستردام، أطباق بيض، توست، بانكيك وقهوة، جوّه مرّة حلو لبداية اليوم قبل التمشية.</p>
+                  <a href="https://maps.app.goo.gl/ZKxmfYutMTYxYoXQ7?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/albert-cuyp-market.jpg" alt="Albert Cuyp Market" />
+                <div class="time">⏰ 10:30</div>
+                <div class="activity">
+                  <h4>Albert Cuyp Market في حي De Pijp</h4>
+                  <p>سوق شارع طويل فيه أكشاك أكل خفيف، سمك، وافل، جبن، تذكارات... تمشية خفيفة وتذوقون كذا شي بسيط.</p>
+                  <a href="https://maps.app.goo.gl/ZzToNTZFPMK67v93A?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                  <p class="tip">💡 بعد السوق تكملون داخل حي De Pijp نفسه، فيه محلات وكافيهات وجلسات حلوة</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/jordaan-nine-streets.jpg" alt="Jordaan" />
+                <div class="time">⏰ 13:00 الظهيرة</div>
+                <div class="activity">
+                  <h4>Jordaan / Nine Streets & Vondelpark</h4>
+                  <p>تقدرون تروحون لحي Jordaan أو منطقة Negen Straatjes (Nine Streets) للتمشية على القنوات والتصوير والتسوّق الخفيف.</p>
+                  <a href="https://maps.app.goo.gl/Hj9eAXs1cpxP4XNKA?g_st=ipc" class="location-link" target="_blank">📍 Nine Streets</a>
+                  <p>لو الجو حلو، مرّة لطيف تختمون العصر بجلسة في <strong>Vondelpark</strong>؛ حديقة كبيرة، ممكن تمشية أو قعدة بسيطة على العشب.</p>
+                  <a href="https://maps.app.goo.gl/bku9Xch7S6Fk6rTEA?g_st=ipc" class="location-link" target="_blank">📍 Vondelpark</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/lot61-coffee.jpg" alt="Coffee" />
+                <div class="time">⏰ 15:00 قهوة</div>
+                <div class="activity">
+                  <h4>LOT61 Coffee Roasters</h4>
+                  <p>خذوا استراحة قهوة في واحد من أفضل الكافيهات في أمستردام.</p>
+                  <a href="https://maps.app.goo.gl/HxjFCY82eugm9EmK9?g_st=ipc" class="location-link" target="_blank">📍 الموقع</a>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <img class="timeline-item-image" src="images/new-york-pizza.jpg" alt="Dinner Options" />
+                <div class="time">⏰ 19:00 الغداء أو العشاء</div>
+                <div class="activity">
+                  <h4>خيارات سريعة ولذيذة</h4>
+                  <p><strong>New York Pizza:</strong> للي يحبون بيتزا ستايل أمريكي وقطع كبيرة.</p>
+                  <a href="https://maps.app.goo.gl/2nvcf6vqcJhqcGGKA?g_st=ipc" class="link-button" target="_blank">📍 New York Pizza</a>
+                  <p><strong>Palmyra - مطعم سوري:</strong> المقبّلات عندهم قوية والمشاوي معروفة، تقدرون تحجزونه كبديل عن البيتزا أو تضيفونه في يوم مختلف لو تبغون تعيدون الأكل العربي.</p>
+                  <a href="https://maps.app.goo.gl/bEJKJgSkvqduowDW7?g_st=ipc" class="link-button" target="_blank">📍 Palmyra</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-box">
+              <h4>لو السفر في الشتاء (فعاليات التزلج):</h4>
+              <p>إذا رحلتكم في الشتاء (تقريبًا من نهاية نوفمبر لـ يناير)، بعد ما تخلصون الأسواق والتمشية تقدرون تروحون لساحة <strong>Museumplein</strong>.</p>
+              <p>هناك يكون فيه حلبة تزلج على الجليد ⛸️ وأكشاك كريسماس وأجواء شتوية، أنوار وموسيقى وأكل خفيف (وافل، شوكولاتة ساخنة...)، الجو مرّة مناسب تختمون فيه اليوم الخامس.</p>
+              <a href="https://maps.app.goo.gl/hNdTmKGTpru5rhxv9?g_st=ipc" class="location-link" target="_blank">📍 Museumplein</a>
+            </div>
+
+            <div class="day-cost">💰 تكلفة اليوم: أسواق + أكل + نشاطات اختيارية</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Transportation Section -->
+  <section class="andorra-section" id="transportation">
+    <div class="container">
+      <h2 class="section-title">🚇 طرق التنقّل داخل أمستردام</h2>
+
+      <div class="andorra-cards">
+        <div class="info-card">
+          <div class="card-icon">🚶</div>
+          <h4>المشي</h4>
+          <p>أحسن طريقة تشوف فيها المدينة؛ أغلب الأماكن في السنتر قريبة من بعض (Dam – 9 Streets – Jordaan – القنوات...)</p>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">🚊</div>
+          <h4>GVB (الترام / المترو / الباص)</h4>
+          <ul>
+            <li>تقدر تشحن تذكرة يومية/عدة أيام من الماكينات أو الأكشاك</li>
+            <li>ممتاز لو فندقك شوي بعيد عن السنتر أو بتروح لمناطق مثل De Pijp أو RAI</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">🚂</div>
+          <h4>NS (القطار)</h4>
+          <ul>
+            <li>من Schiphol Airport → Amsterdam Central تقريبًا 15-20 دقيقة</li>
+            <li>تستخدمه للمدن والقُرى حول أمستردام مثل Zaandam و Zaanse Schans وغيرها</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">🚗</div>
+          <h4>التاكسي / Uber / Bolt</h4>
+          <p>متوفر بس أغلى من الترام والقطارات؛ استخدمه لو معك شنط كثيرة أو وصلت متأخر في الليل</p>
+        </div>
+
+        <div class="info-card">
+          <div class="card-icon">🚲</div>
+          <h4>Bike (الدراجة)</h4>
+          <p>مناسبة للي متعود على سياقة الدراجة وسط الناس والسيارات؛ الشوارع زحمة وممرات الدراجات لها قوانينها، فمو أنسب شيء لكل الناس</p>
+          <p class="warning">⚠️ انتبه من ممرات الدراجات ولا تمشي فيها!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hotels Section -->
+  <section class="cost-section" id="hotels">
+    <div class="container">
+      <h2 class="section-title">🏨 فنادق مناسبة للخليجيين (موقع قوي + مستوى نظافة عالي)</h2>
+
+      <div class="andorra-intro">
+        <p>الفنادق اللي فوق مناسبة للخليجيين من ناحية الموقع (قريبة من السنتر والمواصلات) ومستوى النظافة والخدمة، والأسعار تتغيّر كثير حسب الموسم والعروض.</p>
+      </div>
+
+      <div class="cost-comparison">
+        <div class="cost-card">
+          <div class="cost-icon">🏨</div>
+          <h3>Anantara Grand Hotel Krasnapolsky Amsterdam</h3>
+          <p>موقعه في قلب ساحة Dam قّدام القصر الملكي، كل شيء حولك: المطاعم، المحلات، الترام، وحتى القنوات مشي.</p>
+          <p>يناسب العوائل والخليجيين اللي يدورون فخامة وموقع ذهبي.</p>
+          <div class="cost-amount">€300-450</div>
+          <p class="cost-note">بالليلة (حسب الموسم)</p>
+          <a href="https://www.booking.com/hotel/nl/anantara-ghkrasnapolsky.html" class="booking-button" target="_blank">حجز عبر Booking.com</a>
+        </div>
+
+        <div class="cost-card">
+          <div class="cost-icon">🏨</div>
+          <h3>Park Plaza Victoria Amsterdam</h3>
+          <p>فندق 4 نجوم مقابل Amsterdam Central Station مباشرة؛ ممتاز للي جاي قطار ومنه لكل مكان ترام/مترو/عبّارات.</p>
+          <p>حوالينه مطاعم كثيرة وبعض الخيارات الحلال، ومناسب للعوائل اللي تحب تكون قريب من النقل العام.</p>
+          <div class="cost-amount">€220-350</div>
+          <p class="cost-note">بالليلة (حسب الموسم)</p>
+          <a href="https://www.booking.com/hotel/nl/victoria.html" class="booking-button" target="_blank">حجز عبر Booking.com</a>
+        </div>
+
+        <div class="cost-card">
+          <div class="cost-icon">🏨</div>
+          <h3>art'otel Amsterdam (Powered by Radisson)</h3>
+          <p>فندق ديزاين/مودرن قدّام Amsterdam Central وبرضو قريب من القنوات والسنتر.</p>
+          <p>ديكور مودرن وغرفهم تشبه البوتيك هوتيل، مناسب للشباب أو الكبلز اللي يحبون ستايل فنّي.</p>
+          <div class="cost-amount">€230-350</div>
+          <p class="cost-note">بالليلة</p>
+          <a href="https://www.booking.com/hotel/nl/art-otel-amsterdam.html" class="booking-button" target="_blank">حجز عبر Booking.com</a>
+        </div>
+
+        <div class="cost-card">
+          <div class="cost-icon">🏨</div>
+          <h3>NH Collection Amsterdam Barbizon Palace</h3>
+          <p>5 نجوم، قدّام Amsterdam Central وعلى بعد مشي بسيط من Dam Square؛ يجمع بين مبنى تاريخي ومرافق حديثة.</p>
+          <p>خيار رايق للعوائل اللي تبي فخامة وسط المدينة بس بسعر غالبًا أقل من أنانتارا.</p>
+          <div class="cost-amount">€220-330</div>
+          <p class="cost-note">بالليلة</p>
+          <a href="https://www.booking.com/hotel/nl/nhbarbizon.html" class="booking-button" target="_blank">حجز عبر Booking.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Winter Activities Section -->
+  <section class="christmas-section" id="winter">
+    <div class="container">
+      <h2 class="section-title">❄️ فعاليات الشتاء والبرد في أمستردام</h2>
+
+      <div class="christmas-intro">
+        <p>لو رحلتك بين نوفمبر – بداية فبراير تقريبًا، هذي أهم الأشياء اللي تقدر تضيفها لجدولك، مع الروابط الرسمية عشان تحجز وتشيّك على المواعيد 👇</p>
+      </div>
+
+      <div class="christmas-grid">
+        <div class="christmas-card highlight-festival">
+          <div class="festival-badge">موصى به</div>
+          <div class="festival-icon">⛸️</div>
+          <div class="festival-name">
+            <span class="name-ar">Ice*Amsterdam – حلبة التزلج في Museumplein</span>
+          </div>
+          <div class="festival-description">
+            <p>ساحة المتاحف Museumplein تتحوّل في الشتاء لحلبة تزلج كبيرة قّدام Rijksmuseum.</p>
+            <ul class="feature-list">
+              <li>تقدر تستأجر سكيت من نفس المكان</li>
+              <li>فيه مطعم/كافيه عند الحلبة يقدم شوكولاتة ساخنة وأكل خفيف</li>
+              <li>المكان مناسب للعوائل والأطفال</li>
+              <li>من نص نوفمبر إلى بداية فبراير</li>
+            </ul>
+          </div>
+          <div class="festival-links">
+            <a href="https://www.getyourguide.com/amsterdam-l36/museumplein-ice-rink-entry-ticket-t1118663/?utm_source=getyourguide&utm_medium=sharing&utm_campaign=activity_details" class="festival-button primary" target="_blank">🔗 الموقع الرسمي والحجز</a>
+          </div>
+        </div>
+
+        <div class="christmas-card">
+          <div class="festival-icon">🎡</div>
+          <div class="festival-name">
+            <span class="name-ar">Amsterdam Winter Paradise – RAI</span>
+          </div>
+          <div class="festival-description">
+            <p>فعالية كبيرة داخل وخارج Amsterdam RAI؛ فيها حلبة تزلج داخلية وخارجية، ألعاب، ملاهي خفيفة، سوق كريسماس، أكل ومشروبات شتوية، وعروض لايف.</p>
+            <p><strong>الوصول:</strong> خط M52 والنزول في Europaplein، أو خطوط M50/M51 إلى محطة RAI.</p>
+            <p>عادة من منتصف ديسمبر إلى بداية يناير.</p>
+          </div>
+          <div class="festival-links">
+            <a href="https://www.getyourguide.com/amsterdam-l36/amsterdam-het-amsterdamse-winterparadijs-entry-ticket-t1106526/?utm_source=getyourguide&utm_medium=sharing&utm_campaign=activity_details" class="festival-button primary" target="_blank">🔗 الموقع الرسمي والتذاكر</a>
+          </div>
+        </div>
+
+        <div class="christmas-card">
+          <div class="festival-icon">🎄</div>
+          <div class="festival-name">
+            <span class="name-ar">أجواء الكريسماس في Dam Square & Around</span>
+          </div>
+          <div class="festival-description">
+            <p>لو الجو برد بس ما ودك تزلج، يكفي تتمشّى حول Dam Square، شوارع التسوّق، ومحلات الهدايا؛ الشجر مضيّف وأنوار وموسيقى كريسماس في كل مكان.</p>
+            <p>تقدر تربطها مع قهوة أو حال في السنتر، أو زيارة أحد الفنادق المطلة على الدام كختمة لليوم.</p>
+          </div>
+        </div>
+
+        <div class="christmas-card highlight-festival">
+          <div class="festival-icon">💡</div>
+          <div class="festival-name">
+            <span class="name-ar">Amsterdam Light Festival - فعالية الأنوار في القنوات</span>
+          </div>
+          <div class="festival-description">
+            <p>في فترة الشتاء غالبًا يكون فيه Amsterdam Light Festival: أعمال فنية وأشكال مضيئة موزّعة على القنوات، تشوفونها إمّا مشي أو مع كروز بالقارب في الليل.</p>
+            <p>التجربة حلوة مرّة مع الجو البارد: قارب دافي، أنوار على المباني والجسور، وصور قوية.</p>
+            <p>عادة من نهاية نوفمبر تقريبًا إلى يناير (تتغيّر التواريخ كل سنة).</p>
+          </div>
+          <div class="festival-links">
+            <a href="https://www.getyourguide.com/amsterdam-l36/amsterdam-light-festival-boat-with-unlimited-drinks-snack-t501688/?utm_source=getyourguide&utm_medium=sharing&utm_campaign=activity_details" class="festival-button primary" target="_blank">🔗 الموقع الرسمي والمسارات</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="christmas-tips">
+        <div class="tips-title">⚠️ تنبيه مهم</div>
+        <p style="text-align: center; font-size: 1.1rem; color: var(--dark-gray);">
+          تواريخ الفعاليات الشتوية تتغيّر من سنة لثانية، فقبل السفر تأكد من المواعيد وأسعار التذاكر من المواقع الرسمية اللي فوق، واختر اليوم اللي يناسب جدولك
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apps Section -->
+  <section class="restaurant-booking-section" id="apps">
+    <div class="container">
+      <h2 class="section-title">📱🇳🇱 أهم التطبيقات اللي تحتاجها في أمستردام</h2>
+
+      <div class="booking-intro">
+        <p>نزّل هذي التطبيقات قبل السفر، وفعّل الإنترنت أو eSIM عشان كل شيء يكون معك في الجوال وتتنقل بسهولة في أمستردام</p>
+      </div>
+
+      <div class="booking-platforms">
+        <div class="booking-platform-card">
+          <div class="platform-header">
+            <div class="platform-icon">🗺️</div>
+            <h3>Google Maps</h3>
+          </div>
+          <div class="platform-description">
+            أساسي للمشي والمواصلات، يوضح لك المترو/الترام/الباص، وأفضل طريق لكل مكان + تقييمات المطاعم والكافيهات.
+          </div>
+        </div>
+
+        <div class="booking-platform-card">
+          <div class="platform-header">
+            <div class="platform-icon">🚂</div>
+            <h3>NS App</h3>
+          </div>
+          <div class="platform-description">
+            تطبيق شركة القطارات الهولندية، مفيد لرحلات القطار بين المدن والقرى مثل Zaandam و Giethoorn وغيرها (مواعيد – المنصات – تأخيرات).
+          </div>
+        </div>
+
+        <div class="booking-platform-card">
+          <div class="platform-header">
+            <div class="platform-icon">🚊</div>
+            <h3>GVB / 9292</h3>
+          </div>
+          <div class="platform-description">
+            <p><strong>GVB:</strong> لمترو/ترام/باص أمستردام نفسها.</p>
+            <p><strong>9292:</strong> يعطيك كل وسائل النقل العامة (قطار + ترام + باص) خطوة بخطوة من عنوان لعنوان.</p>
+          </div>
+        </div>
+
+        <div class="booking-platform-card">
+          <div class="platform-header">
+            <div class="platform-icon">🚗</div>
+            <h3>Uber / Bolt</h3>
+          </div>
+          <div class="platform-description">
+            لو احتجت مشوار سريع خصوصًا مع الشنط أو في وقت متأخر، تشوف السعر قبل ما تطلب.
+          </div>
+        </div>
+
+        <div class="booking-platform-card">
+          <div class="platform-header">
+            <div class="platform-icon">🎫</div>
+            <h3>GetYourGuide</h3>
+          </div>
+          <div class="platform-description">
+            تحجز منه التورز (كروز، قرى، متاحف) وتحتفظ بالتذاكر في الجوال.
+          </div>
+        </div>
+
+        <div class="booking-platform-card">
+          <div class="platform-header">
+            <div class="platform-icon">🏨</div>
+            <h3>Booking.com</h3>
+          </div>
+          <div class="platform-description">
+            لمتابعة حجز الفندق، تشوف اللوكيشن بالضبط، رقم الفندق، والسياسات بسهولة.
+          </div>
+        </div>
+
+        <div class="booking-platform-card">
+          <div class="platform-header">
+            <div class="platform-icon">🍔</div>
+            <h3>Uber Eats / Thuisbezorgd / Deliveroo</h3>
+          </div>
+          <div class="platform-description">
+            لتوصيل الأكل للفندق/الشقة، خصوصًا لو رجعتوا تعبانين وما تبغون تطلعون.
+          </div>
+        </div>
+
+        <div class="booking-platform-card">
+          <div class="platform-header">
+            <div class="platform-icon">ℹ️</div>
+            <h3>Iamsterdam / Amsterdam City Guide</h3>
+          </div>
+          <div class="platform-description">
+            تعطيك فعاليات، متاحف، أسواق، وأحيانًا خصومات أو معلومات عن المهرجانات والأنشطة الموسمية.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>جدول أمستردام - رحلة 5 أيام في هولندا 🇳🇱</p>
+    <p>دليلك الشامل لاستكشاف أمستردام وما حولها</p>
+    <p class="footer-note">
+      إن شاء الله تكون رحلة حلوة عليكم وتجربوا أشياء كثير حلوة ومختلفة ❤️
+    </p>
+    <p>للتواصل و الاستفسار:</p>
+    <div style="margin-top: 1rem; display: flex; justify-content: center; align-items: center; gap: 1rem;">
+      <a href="https://www.instagram.com/guider_adventure105?igsh=MWZ1MGc0N3VlM3dsbw==" target="_blank" class="whatsapp-float" aria-label="Follow us on Instagram" style="background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path fill="currentColor"
+            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg>
+      </a>
+      <a href="https://wa.me/966581939806" target="_blank" class="whatsapp-float" aria-label="Contact us on WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path fill="currentColor"
+            d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-4.713 1.262 1.262-4.669-0.292-0.508c-1.207-2.100-1.847-4.507-1.847-6.978 0-7.51 6.11-13.62 13.62-13.62s13.62 6.11 13.62 13.62c0 7.51-6.11 13.62-13.62 13.62zM21.305 19.26c-0.346-0.174-2.049-1.007-2.366-1.123-0.316-0.117-0.547-0.174-0.776 0.174s-0.893 1.123-1.094 1.347c-0.201 0.231-0.401 0.26-0.747 0.087-0.346-0.174-1.461-0.537-2.785-1.711-1.030-0.919-1.724-2.053-1.925-2.398-0.201-0.346-0.021-0.533 0.152-0.705 0.156-0.155 0.346-0.401 0.518-0.603 0.174-0.201 0.231-0.346 0.346-0.576 0.117-0.231 0.058-0.432-0.028-0.603-0.087-0.174-0.776-1.865-1.063-2.556-0.280-0.672-0.56-0.58-0.776-0.591-0.201-0.010-0.432-0.012-0.662-0.012s-0.604 0.087-0.92 0.432c-0.316 0.346-1.206 1.179-1.206 2.871s1.235 3.33 1.406 3.561c0.174 0.231 2.433 3.713 5.894 5.208 0.824 0.356 1.467 0.569 1.968 0.728 0.827 0.263 1.581 0.226 2.175 0.137 0.664-0.099 2.049-0.835 2.335-1.642 0.288-0.808 0.288-1.501 0.201-1.642-0.086-0.14-0.316-0.231-0.662-0.403z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Initialize content protection for Amsterdam
+    initContentProtection('Amsterdam');
+  </script>
+</body>
+
+</html>
